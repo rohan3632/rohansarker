@@ -1,25 +1,26 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main() {
     int t;
     scanf("%d", &t);
-    for (int i = 0; i < t; i++)
-    {
+
+    while(t--) {
         int n;
         scanf("%d", &n);
-        for (int i = 0; i < n; i++)
-        {
-            scanf("%d", &n);
-        }
-        for (int i = 0; i < n - 1; i++)
-        {
-            for (int j = i; j <= ; j++)
-            {
-                /* code */
+
+        int a[105];
+        for(int i = 0; i < n; i++)
+            scanf("%d", &a[i]);
+
+        for(int i = 0; i < n; i++) {
+            int mx = a[i];
+            for(int j = i; j < n; j++) {
+                if(a[j] > mx) mx = a[j];
+                printf("%d ", mx);
             }
-            
         }
-        
+        printf("\n");
     }
-    
+
+    return 0;
 }
